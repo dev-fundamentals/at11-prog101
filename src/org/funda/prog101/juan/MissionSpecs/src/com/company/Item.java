@@ -8,17 +8,10 @@ public class Item {
     {
         this.name = name;
     }
-
-    public String getName()
-    {
-        return name;
-    }
-
     public void setWight(int wight)
     {
         this.wight = wight;
     }
-
     public int getWight()
     {
         return wight;

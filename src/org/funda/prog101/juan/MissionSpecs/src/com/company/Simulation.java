@@ -74,10 +74,6 @@ public class Simulation {
             {
                 numberOfRocket++;
             }
-            else
-            {
-                //cost++;
-            }
         }
         return numberOfRocket;
     }
