@@ -7,20 +7,11 @@ public class Main {
 		Position newPosition = new Position(6, 3);
 		Position newPosition1 = new Position(6, 5);
 		
-		Piece piece = new Piece();
 		
-		Queen queen = new Queen();
-		queen.position = new Position(8, 5);
-		
-		boolean auxFather = piece.isValidMove(newPosition);
-		boolean auxFather1 = piece.isValidMove(newPosition1);
+		Queen queen = new Queen(8, 5);
 		
 		boolean aux = queen.isValidMove(newPosition);
 		boolean aux1 = queen.isValidMove(newPosition1);
-		
-		System.out.println("Father:");
-		System.out.println(auxFather);
-		System.out.println(auxFather1);
 		
 		System.out.println("Child:");
 		System.out.println(aux);

@@ -2,7 +2,15 @@ package Chess;
 
 public class Queen extends Piece{
 	
+	public Queen(int row, int column) {
+		super(row, column);
+	}
+	
 	public boolean isValidMove(Position newPosition) {
+		
+		if(!super.isValidMove(newPosition)) {
+			return false;
+		}
 
 		if (isValidMoveAsRock(newPosition) || isValidMoveAsBichop(newPosition)) {
 			return true;
