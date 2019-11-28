@@ -18,6 +18,10 @@ public class Store {
 		return id;
 	}
 	
+	public ArrayList<Product> getProducts(){
+		return products;
+	}
+	
 	public Store() 
 	{}
 	

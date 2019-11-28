@@ -1,6 +1,11 @@
 package examopp;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Locale.Category;
+import java.util.Scanner;
+
+import exam1.progExam1;
 
 public class Main {
 
@@ -64,7 +69,89 @@ public class Main {
 		store.addProduct(videoGame2);
 		store.addProduct(videoGame3);
 		
+		System.out.println("Welcome to CenterShop Store");
+		System.out.println("Add Customer: option 1 ");
+		System.out.println("Add Product: option 2 ");
+		System.out.println("List products: option 3 ");
+		System.out.println("find product: option 4 ");
+		System.out.println("find products: option 5 ");
+		System.out.println("rent products: option 6 ");
+		System.out.println("Buy products: option 7 ");
+		System.out.println("Exit: option 0 ");
 		
+		
+		int value = -1;
+		while(value != 0)
+		{
+			Scanner shop = new Scanner(System.in);
+			value = shop.nextInt();
+			if (value == 1) {
+				System.out.println("CI ");
+				int ci = shop.nextInt();
+				System.out.println("Name ");
+				String name = shop.nextLine();
+				System.out.println("Age ");
+				int age = shop.nextInt();
+				System.out.println("Gender ");
+				String gender = shop.nextLine();
+				System.out.println("ID ");
+				int id = shop.nextInt();
+				Customer customer = new Customer(ci, name, age, gender, id);
+				store.addCustomer(customer);
+				System.out.println("Created successfully ");
+			}
+			if (value == 2) {
+				System.out.println("ID ");
+				int id = shop.nextInt();
+				System.out.println("Name ");
+				String title = shop.nextLine();
+				System.out.println("Category ");
+				String category = shop.nextLine();
+				System.out.println("Status ");
+				String status = shop.nextLine();
+				System.out.println("Price ");
+				double price = shop.nextDouble();
+				System.out.println("year ");
+				int year = shop.nextInt();
+				System.out.println("movieState ");
+				String movieState = shop.nextLine(); 
+				
+				System.out.println("Created successfully ");
+			}
+			
+			if (value == 3) {
+				ArrayList<Product> list = store.getProducts();
+				System.out.println("id " + "title " + " category " + "       price " );
+				for (Product product : list) {
+						System.out.println(product.id + " " + product.title + " "
+								+ product.category + " " + product.status + " " + product.price);
+				}
+			}
+			
+			if (value == 4) {
+				System.out.println("Enter Product ID");
+				int id = shop.nextInt();
+				Product product = store.findProduct(id);
+				System.out.println("id " + "title " + " category " + "       price " );
+						System.out.println(product.id + " " + product.title + " "
+								+ product.category + " " + product.status + " " + product.price);
+			}
+			
+			if (value == 6) {
+				int [] productList = new int [1];
+				System.out.println("Enter store ID");
+				int sid = shop.nextInt();
+				System.out.println("Enter Customer ID");
+				int cid = shop.nextInt();
+//				System.out.println("Enter type of agrement");
+//				String cond = shop.nextLine();
+				System.out.println("Enter Product ID");
+				int id = shop.nextInt();
+				
+				productList[0] = id;
+				store.rent(sid, cid, ConditionType.Explicit, productList);
+			}
+		}
 	}
 
 }
