@@ -1,5 +1,7 @@
 package test;
 
-public class TvSHow extends Disc{
+public class TvSHow extends Product{
+	
+	protected String channel;
 
 }
