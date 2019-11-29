@@ -1,4 +1,4 @@
-package examopp;
+package examoop;
 
 public class Actor extends Person{
 	private String speciality;

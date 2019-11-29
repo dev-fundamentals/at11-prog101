@@ -1,4 +1,4 @@
-package examopp;
+package examoop;
 
 public class Manager extends Person{
 	private int id;

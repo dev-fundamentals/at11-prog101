@@ -1,15 +1,15 @@
-package examopp;
+package examoop;
 
 import java.util.ArrayList;
 
-public class Customer extends Person{
+public class Employee extends Person {
 	private int id;
 	
 	public int getId() {
 		return id;
 	}
 	
-	public Customer(int ci, String name, int age, String gender, int id)
+	public Employee(int ci, String name, int age, String gender, int id)
 	{
 		super(ci, name, age, gender);
 		this.id = id;

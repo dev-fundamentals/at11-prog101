@@ -1,8 +1,6 @@
-package examopp;
+package examoop;
 
-import java.util.*;
 import java.util.ArrayList;
-
 
 import javax.swing.text.html.HTMLDocument.Iterator;
 
@@ -87,10 +85,10 @@ public class Store {
 		System.out.println("Total price for rented " + contract.getTotalPrice());
 	}
 	
-	public void sell(int storeId, int customerId, ArrayList<Movie> movieList) {
+	public void sell(int storeId, int customerId, int [] movieList) {
 		Sell sell = new Sell(storeId, customerId);
-		for (Movie movie : movieList) {
-			Product findMovie = findProduct(movie.id);
+		for (int item = 0; item < movieList.length; item++) {
+			Product findMovie = findProduct(movieList[item]);
 			if (findMovie != null) {
 				findMovie.status = ProductStatus.Customer;
 				sell.addMovie((Movie)findMovie);

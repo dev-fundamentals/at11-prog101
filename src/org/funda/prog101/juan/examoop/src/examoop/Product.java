@@ -1,4 +1,4 @@
-package examopp;
+package examoop;
 
 public abstract class Product {
 	protected int id;

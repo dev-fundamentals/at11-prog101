@@ -1,4 +1,4 @@
-package examopp;
+package examoop;
 
 public class VideoGame extends Product{
 	private String version;
@@ -8,8 +8,8 @@ public class VideoGame extends Product{
 	}
 	
 	public VideoGame(int id, String title, ProdutCategory category,
-			ProductStatus status, double price, String version) {
+					ProductStatus status, double price, String version) {
 		super(id, title, category, status, price);
-		this.version =version;
+		this.version = version;
 	}
 }

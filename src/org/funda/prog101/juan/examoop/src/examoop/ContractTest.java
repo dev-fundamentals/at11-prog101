@@ -1,4 +1,4 @@
-package examopp;
+package examoop;
 
 import static org.junit.jupiter.api.Assertions.*;
 

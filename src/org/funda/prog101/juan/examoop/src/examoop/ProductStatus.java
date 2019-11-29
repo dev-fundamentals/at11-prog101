@@ -1,4 +1,4 @@
-package examopp;
+package examoop;
 
 public enum ProductStatus {
 	InStoreAvailable,

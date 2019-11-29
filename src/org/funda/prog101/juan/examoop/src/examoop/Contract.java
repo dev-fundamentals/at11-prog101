@@ -1,9 +1,8 @@
-package examopp;
+package examoop;
 
 import java.util.ArrayList;
 
 public class Contract {
-	private int id;
 	private int storeId;
 	private int customerId;
 	private ArrayList<Product> products;
